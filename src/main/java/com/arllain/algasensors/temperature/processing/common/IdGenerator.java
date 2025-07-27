@@ -1,4 +1,4 @@
-package com.arllain.algasensors.temperature.processing;
+package com.arllain.algasensors.temperature.processing.common;
 
 import com.fasterxml.uuid.Generators;
 import com.fasterxml.uuid.impl.TimeBasedEpochRandomGenerator;
@@ -6,15 +6,13 @@ import com.fasterxml.uuid.impl.TimeBasedEpochRandomGenerator;
 import java.util.UUID;
 
 public class IdGenerator {
-
-    private static  final TimeBasedEpochRandomGenerator timeBasedEpochRandomGenerator =
+    private static final TimeBasedEpochRandomGenerator timeBasedEpochRandomGenerator =
             Generators.timeBasedEpochRandomGenerator();
 
     private IdGenerator() {
     }
 
-    public static UUID generateTimeBasedUUIE() {
+    public static UUID generateTimeBasedUUID() {
         return timeBasedEpochRandomGenerator.generate();
     }
-
 }
